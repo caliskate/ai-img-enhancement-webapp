@@ -32,3 +32,57 @@ AI Image Enhancement Web Application
 <br>• Evaluate the system using the test dataset.
 <br>• Conduct user testing to gather feedback and make improvements.
 
+# Application
+
+# Build the image
+
+docker-compose build
+
+# Run the container
+
+docker-compose up
+
+# Run in detached mode
+
+docker-compose up -d
+
+# View logs
+
+docker-compose logs -f
+
+# Stop
+
+docker-compose down
+
+# Check point
+
+curl <http://localhost:5000/health>
+
+# Colorize image
+
+curl -X POST \
+ -F "image=@/path/to/grayscale_image.png" \
+ -F "strength=0.75" \
+ -F "guidance_scale=7.5" \
+ -F "num_inference_steps=50" \
+ <http://localhost:5000/api/colorize> \
+ --output colorized.png
+
+# Inpaint Image
+
+curl -X POST \
+ -F "image=@/path/to/image.png" \
+ -F "mask_top=0.25" \
+ -F "mask_bottom=0.75" \
+ -F "mask_left=0.25" \
+ -F "mask_right=0.75" \
+ -F "prompt=fill in the missing parts realistically" \
+ <http://localhost:5000/api/inpaint> \
+ --output inpainted.png
+
+# Convert to Grayscale
+
+curl -X POST \
+ -F "image=@/path/to/color_image.png" \
+ <http://localhost:5000/api/grayscale> \
+ --output grayscale.png
