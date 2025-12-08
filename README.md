@@ -1,5 +1,6 @@
-USD AAI-521: Applied Computer Vision for AI
-Final Project
+USD AAI-521 - Applied Computer Vision for AI: Final Project
+
+Group 5: Dylan Scott-Dawkins, Tej Bahadur Singh and Darin Verduzco
 
 AI Image Enhancement Web Application
 
@@ -31,6 +32,32 @@ AI Image Enhancement Web Application
 <br>3 - Evaluation and Testing:
 <br>• Evaluate the system using the test dataset.
 <br>• Conduct user testing to gather feedback and make improvements.
+
+Fine tuning code:
+
+ https://github.com/caliskate/ai-img-enhancement-webapp 
+
+Back/front-end code, web-app:
+
+https://huggingface.co/spaces/dydsa/faai25 
+
+Fine-tuned models:
+
+https://huggingface.co/dydsa/superres_unet 
+
+https://huggingface.co/dydsa/superres 
+
+https://huggingface.co/dydsa/denoiser_unet 
+
+https://huggingface.co/dydsa/denoiser 
+
+https://huggingface.co/caliskate/colorizer-pipe-fine-tuned-aai521 
+
+https://huggingface.co/caliskate/inpainting-LoRA-6-epochs 
+
+Dataset source: https://huggingface.co/datasets/detection-datasets/coco
+
+
 
 # Application
 
